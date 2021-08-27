@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="formulario.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+    
+    <title>JobsNet</title>
+</head>
+<header>
+<nav>
+        <ul class="navigation">
+          <h1> <div class="logo"> <img width="150" height="110" src="jobsnet.jpeg"> </div>  </h1>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+</header> 
+<body>
+    <div>
+        <h1 id="titulo">Cadastre seu currículo!</h1>
+        <h2 id="subtitulo" class="documentos"> Dados Pessoais</h2>
+        
+    </div>
+ <!--<button type="button" onclick="submit()">Click me</button> -->
+    <form> 
+        <fieldset class="grupodados">
+        <div class="row1">
+            <div class="columm1">
+                <label for="nome">Nome Completo:</label> 
+                <input type="text" name="nome" id="nome" required> 
+            </div>
+
+            <div class="columm1">
+                <label for="cargo">Cargo Pretendido:</label> 
+                <input type="text"name="cargo" id="cargo"> 
+            </div>
+        </div>
+
+        <div class="row1">
+            <div class="columm1">
+                <label for="dataNasc">Data de Nascimento:</label> 
+                <input type="date" id="dataNasc" name="dataNasc" required>
+            </div>
+
+            <div class="columm1">
+                <label for="estCivil">Estado Civil:</label> 
+                <select name="estCivil" id="estCivil">
+                    <option selected disabled value="">Selecione</option>
+                    <option value="Solteiro">Solteiro(a)</option>
+                    <option value="Casado">Casado(a)</option>
+                    <option value="Divorciado">Divorciado(a)</option>
+                    <option value="Viuvo">Viúvo(a)</option>
+                </select>
+            </div>
+
+            <div class="columm1">
+                <label for="sexo">Sexo:</label> 
+                <select name="sexo" id="sexo">
+                    <option selected disabled value="">Selecione</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Nbinario">Não Binário</option>
+                    <option value="Ninformar">Prefiro não informar</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row1">
+            <div class="columm1">
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep">
+            </div>
+
+            <div class="columm1">
+                <label for="endereco">Endereço: </label> 
+                <input type="text" id="endereco" name="endereco" placeholder="ex: Nome da Rua" required>
+            </div>
+        </div>    
+
+        <div class="row1">
+            <div class="columm1">
+                <label for="numero">Número: </label> 
+                <input type="number" id="num" name="endereco">
+            </div>
+
+            <div class="columm1">
+                <label for="complemento">Complemento: </label> 
+                <input type="text" id="comp" name="endereco" placeholder="(opcional)">
+            </div>
+
+            <div class="columm1">
+                <label for="bairro">Bairro:</label> 
+                <input type="text" id="bairro" name="endereco" required> 
+            </div>
+        </div>    
+
+        <div class="row1">
+            <div class="columm1">
+                <label for="cidade">Cidade:</label> 
+                <input type="text" id="cidade" name="endereco" required>
+            </div>
+
+            <div class="columm1">
+                <label for="uf">Estado:</label>
+                <select id="estado" name="endereco" required>
+                <option selected disabled value="">Selecione</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+                </select>
+            </div>
+        
+        </div>
+
+        <div class="row1">
+            <div class="columm1">
+                <label for="telfixo">Telefone Fixo:</label> 
+                <input type="tel" id="telfixo" name="telfixo" pattern="[(]?[1-9]{2}[)]?[0-9]{4}[-]?[0-9]{4}" placeholder="ex:(xx)xxxx-xxxx">
+            </div>
+
+            <div class="columm1">
+                <label for="cel">Celular:</label> 
+                <input type="tel" id="cel" name="cel" pattern="[(]?[1-9]{2}[)]?9[0-9]{4}[-]?[0-9]{4}" placeholder="ex:(xx)9xxxx-xxxx">
+            </div>
+        </div>
+
+        <div class="row1">
+            <div class="columm1">
+                <label for="linkedln">Linkedln:</label>
+                <input type="url" id="link" name="link">
+            </div>
+
+            <div class="columm1">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="ex:myname@example.com">
+            </div>
+        </div>
+
+        </fieldset>
+        
+        <h2 id="subtitulo2">Documentos</h2 class="Documentos">
+
+        <fieldset class="grupodoc">
+            
+        <div class="row1">
+            <div class="columm1">
+                <label for="rg">Identidade:</label>
+                <input type="number" id="rg" name="rg" maxlength="9" required>
+            </div>
+
+            <div class="columm1">
+                <label for="cpf">CPF:</label>
+                <input type="number" id="cpf" name="cpf" maxlength="11" required>
+            </div>
+        </div>
+
+        <div class="row1">
+            <div class="columm1">
+                <label for="veiculo">Possui Veículo:</label>
+                <select name="carro" id="carro">
+                    <option selected disabled value="">Selecione</option>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+            </div>
+
+            <div class="columm1">
+                <label for="habiliacao">Habilitação:</label>
+                <input type="number" id="cnh" name="cnh">
+            </div>
+        </div>
+
+        </fieldset>
+
+        
+    </form>
+    <div class="wrap">
+    <button class="button" type="button" onclick="submit()">Enviar seu Currículo</button>
+    </div>
+    <script src="index.js"> </script> 
+</body>
+</html>

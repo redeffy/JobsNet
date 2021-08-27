@@ -1,0 +1,129 @@
+{
+    "openapi": "3.0.0",
+
+    "info":{
+        "title": "JobsNet",
+        "description": "Essa é uma api do JobsNet", 
+        "version": "0.0.1"
+    },
+    "servers":[
+    {
+        "url": "http://localhost:3000",
+        "description": "Ambiente de desenvolvimento"
+    }
+],
+"paths":{
+   "/register": {
+       "post": {
+        "summary": "Cadastro de Candidato",
+            "description": "Rota de cadastro de usuário, recebe: nome, cargo, dataNascimento, estadoCivil, cep, endereço, número, complemento, bairro, cidade, estado, telefone, celular, linkedln, email, identidade, cpf, possuiVeículo e habilitação",
+            "tags": ["candidato"],
+            "requestBody": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "properties": {
+                                "nome":{
+                                    "type": "string"
+                                },
+                                "cargo":{
+                                    "type": "string"
+                                },
+                                "dataNascimento":{
+                                    "type": "string"
+                                },
+                                "estadoCivil": {
+                                    "type": "['solteiro(a), casado(a), divorciado(a), viúvo(a)']"
+                                },
+                                "sexo": {
+                                    "type": "['feminino', 'masculino', 'não binário', 'prefiro não informar']"
+                                },
+                                "cep": {
+                                    "type": "string"
+                                },
+                                "endereco": {
+                                    "type": "string"
+                                },
+                                "número": {
+                                    "type": "number"
+                                },
+                                "complemento": {
+                                    "type": "string"
+                                },
+                                "bairro": {
+                                    "type": "string"
+                                },
+                                "cidade": {
+                                    "type": "string"
+                                },
+                                "estado": {
+                                    "type": "string"
+                                },
+                                "telefone": {
+                                    "type": "string"
+                                },
+                                "celular": {
+                                    "type": "string"
+                                },
+                                "linkedln": {
+                                    "type": "string"
+                                },
+                                "email": {
+                                    "type": "string"
+                                },
+                                "identidade": {
+                                    "type": "string"
+                                },
+                                "cpf": {
+                                    "type": "string"
+                                },
+                                "possuiVeiculo": {
+                                    "type": "['sim', 'não']"
+                                },
+                                "habilitacao":{
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "examples": {
+                            "teste": {
+                                "value": {
+                                    "Nome": "Nathalia Milani",
+                                    "Cargo": "Full Stack Dev",
+                                    "DataNascimento": "25/04/1995",
+                                    "EstadoCivil": "solteiro(a)",
+                                    "sexo": "Feminino",
+                                    "cep": "00000-000",
+                                    "Endereço": "Avenida Brasil",
+                                    "Número": "23",
+                                    "Complemento": "", 
+                                    "Bairro": "Ipanema",
+                                    "Cidade": "Rio de Janeiro",
+                                    "estado": "Rio de Janeiro",
+                                    "telefone": "(11)2564-5636",
+                                    "celular": "(11)93458-9923",
+                                    "linkedln": "",
+                                    "email": "nathalia.milani@gmail.com",
+                                    "identidade": "00.000.000-0",
+                                    "cpf": "000.000.000.-00",
+                                    "possuiVeiculo": "Sim",
+                                    "habilitacao": "000000000-0"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}
+               
+
+
+
+                                
+
+
+
+                    
