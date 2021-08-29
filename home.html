@@ -1,56 +1,72 @@
 <!DOCTYPE html>
 <html lang="PT-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="home.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="home.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <title>JobsNetHome</title>
-</head>
-<header>
-<nav>
-        <ul class="navigation">
-          <h1> <div class="logo"> <img width="150" height="110" src="jobsnet.jpeg"> </div>  </h1>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Sobre nós</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
-      </nav>
-</header> 
-<body>
+  </head>
+  <header>
+    <nav>
+      <ul class="navigation">
+        <h1>
+          <div class="logo">
+            <img width="150" height="110" src="jobsnet.jpeg" />
+          </div>
+        </h1>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Sobre nós</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+  <body>
     <div class="faixa">
-        <video src="video.mp4" witdth= "900" height="500" preload="auto" controls autoplay loop></video>
-        <h1 id="linha"> Procurando um emprego? Aqui você encontra <div id="numero">1</div>
-            <input type="button" id="alterarValor" value="" /> ofertas esperando por você!</h1>
+      <video
+        src="video.mp4"
+        witdth="900"
+        height="500"
+        preload="auto"
+        controls
+        autoplay
+        loop
+      ></video>
+      <h1 id="linha">
+        Procurando um emprego? Aqui você encontra
+        <div id="numero">100</div>
+         ofertas esperando por
+        você!
+      </h1>
     </div>
 
-<div class="chamado">
-    <h2>Cadastre-se agora, é rápido e grátis.</h2>
-</div>
+    <div class="chamado">
+      <h2>Cadastre-se agora, é rápido e grátis.</h2>
+    </div>
 
     <div class="cadastrar">
-        <a href="formulario.html"><button class="button">Cadastrar</button></a>
+      <a href="formulario.html"><button class="button">Cadastrar</button></a>
     </div>
 
     <script>
-        $("#alterarValor").focusout(function() {
-    var numero = document.getElementById('numero');
-    var min = 1;
-    var max = 150594;
-    var duração = 5000; 
-
-    for (var i = min; i <= max; i++) {
-    setTimeout(function(nr) {
-      numero.innerHTML = nr;
-    }, i * 5000 / max, i);
-  }
-}); 
-        </script>
-
-</body>
+      
+      function updatenumber () {
+        setTimeout(() => { 
+      
+        var numero = document.getElementById("numero");
+          numero.innerHTML = Number(numero.innerHTML) + Math.round(Math.random()*10);
+          updatenumber()
+        },1000)
+      }
+      updatenumber()
+    </script>
+  </body>
 </html>
