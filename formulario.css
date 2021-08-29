@@ -138,6 +138,7 @@ select{
     justify-content:space-evenly;
     padding: 0;
     margin: 0;
+    width: 100%;
    
 }
 .row1 > div{
