@@ -1,10 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 
 .navigation{
     height: 150px;
     margin: 0; 
     display: flex;
-    flex-flow: row wrap;
-    list-style: none;
+    flex-direction: row;
     background-color: white;
     justify-content:space-around;
     align-items: center;
@@ -17,7 +21,7 @@
     font-size: 20px;
     color:#1A2980;
     text-decoration: none;
-    padding: 1em;
+    padding: 0.5em;
     display: block;
     font-weight: 700;
     letter-spacing: 1px;
@@ -44,6 +48,8 @@
     text-align: center;
     margin-bottom: 50px;
     margin-top: 60px;
+    justify-content: center;
+    display: flex;
 }
 
 #subtitulo{
@@ -66,9 +72,9 @@ fieldset{
     margin: 0 10em 0 10em;
     border-radius: 6px;
     border: solid #ffffffbb;
-    position: relative;
-    padding: 40px;
-    justify-content: space-around;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     background-color: rgba(500,500,500, 0.15);
     box-shadow: 0 5px 35px rgba(0,0, 0, 0.3);   
@@ -84,7 +90,9 @@ fieldset::after{
     pointer-events: none;
     background: linear-gradient(to bottom, rgba (200, 200, 200, 0.30) 0%, rgba(500, 500, 500, 0.5) 15%, transparent 50%, transparent 85%, rgba(500, 500, 500, 0.25) 100%);
 }
-
+.grupodoc{
+  justify-content: center;
+}
 input{
     height: 25px;
     border: 2px solid rgba(500, 500, 500, 0.4);
@@ -181,6 +189,7 @@ select{
   font-size: 20px;
   font-weight: 800;
   color: seashell;
+  letter-spacing: 1px;
   background: #26D0CE;
   border: none;
   border-radius: 100px;
@@ -231,4 +240,47 @@ button::after {
 button:hover::after, button:focus::after {
   animation: none;
   display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .navigation a{
+    font-size: 18px;
+  }
+  .navigation{
+    width: 120%;
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+  #titulo{
+    margin-left: 120px;
+    font-size: 1.5em; 
+  }
+  #subtitulo{
+    font-size: 1.2em;
+    margin: 0 1em;
+    color: white;
+    margin-bottom: 0.3em;
+  }
+  #subtitulo2{
+    font-size: 1.2em;
+    margin: 0 1em;
+    color: white;
+    margin-bottom: 0.3em;
+    margin-top: 1em;
+  }
+  fieldset{
+    width: 410px;
+    margin-left: 15px;
+    padding: 15px;
+  }
+  body{
+    justify-content: center;
+  }
+.grupodoc{
+  width: 410px;
+}
+.button{
+  justify-content: center;
+  margin-left: 100px;
+}
 }

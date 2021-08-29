@@ -4,21 +4,7 @@ module.exports = {
     async register(req, res){
         console.log('body',req.body)
         const {nome, cargo, dataNascimento, estadoCivil, sexo, cep, endereco, número, complemento, bairro, cidade, estado, telefone, celular, linkedln, email, identidade, cpf, possuiVeiculo, habilitacao} = req.body;
-        //aqui
         
-        //const dados = await fetch(url);
-        //const enderecos = await dados.json();
-        //const url = `https://viacep.com.br/ws/${cep}/json/`;
-        //function ceps() {
-            //return new Promise((resolve, reject) =>{
-               // setTimeout(() => {
-                    
-               // }, timeout(() => {
-                 //   resolve('Promise resolvida');
-               // }, 5000);
-           // });
-      //  }
-
         const newCandidate = new Candidate();
 
         newCandidate.nome = nome;
